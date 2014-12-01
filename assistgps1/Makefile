@@ -17,8 +17,8 @@ include client_handler/build/subdir.mk
 #
 #
 #
-#SRC_FILE=$(TOP)/assistgps.cpp
-SRC_FILE=/local/aaaaa/assistgps1/assistgps.cpp
+SRC_FILE=$(TOP)/assistgps.cpp
+#SRC_FILE=/local/aaaaa/assistgps1/assistgps.cpp
 #$(info $(SRC_FILE))
 #  # Add inputs and outputs from these tool invocations to the build variables
 # All Target
