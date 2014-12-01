@@ -16,7 +16,7 @@ public:
 	external_interface();
 	~external_interface();
 private:
-	int init_tasks();
+	int init_modules();
 };
 
 #endif /* EXTERNALINTERFACE_H_ */
