@@ -18,4 +18,4 @@ LDFLAGS = -lm `pkg-config --cflags gtk+-2.0` `pkg-config --libs gtk+-2.0`
 #$(COMPONENT_OBJ)/externalinterface.o
 DIR =local/aaaaa/assistgps/client_handler/inc
 $(build_path)%.o: $(src_path)%.cpp
-	g++ -g -I$(inc_path) -c $< -o $@
+	gcc -pthread -g -I$(inc_path) -c $< -o $@

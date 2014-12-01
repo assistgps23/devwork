@@ -14,6 +14,7 @@ RM := rm
 #
 # # All of the sources participating in the build are defined here
 include client_handler/build/subdir.mk
+include os_methods/build/subdir.mk
 #
 #
 #
@@ -26,7 +27,7 @@ all:assistgps_full
 assistgps_full:$(OBJ_FILES)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -o "assistgps2" $(OBJ_FILES) -I$(COMPONENT_INC) $(SRC_FILE)
+	g++ -o "assistgps2" $(OBJ_FILES) -I$(inc_path) $(SRC_FILE)
 	@echo 'Finished building target: $@'
 	@echo ' '
 clean:
