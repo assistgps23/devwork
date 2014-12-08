@@ -16,7 +16,9 @@
 #include <unistd.h>    /* _exit, fork */
 #include <iostream>
 using namespace std;
-
+#if defined(__cplusplus)
+extern "C"
+#endif
 
 int main(void) {
 

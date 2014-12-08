@@ -10,6 +10,8 @@ COMPONENT_INC := $(COMPONENT_DIR)/inc
 COMPONENT_SRC := $(COMPONENT_DIR)/src
 COMPONENT_BUILD := $(COMPONENT_DIR)/build
 COMPONENT_OBJ := $(COMPONENT_BUILD)
+INC_PATH :=
+OBJ_FILES :=
 RM := rm
 #
 # # All of the sources participating in the build are defined here
@@ -27,7 +29,7 @@ all:assistgps_full
 assistgps_full:$(OBJ_FILES)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -o "assistgps2" $(OBJ_FILES) -I$(inc_path) $(SRC_FILE)
+	g++ -o "assistgps2" $(OBJ_FILES) $(INC_PATH) $(SRC_FILE) -pthread
 	@echo 'Finished building target: $@'
 	@echo ' '
 clean:

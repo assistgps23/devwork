@@ -33,6 +33,8 @@ external_interface::~external_interface() {
 
 int external_interface::init_modules() {
 	puts("init tasks");
+	os_methods *p;
+	p->create_task();
 	return 1;
 }
 

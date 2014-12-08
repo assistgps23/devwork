@@ -10,12 +10,13 @@ $(info $(src_path))
 $(info $(build_path))
 #THIS_MAKEFILE := $(call where-am-i)
 CPP_FILES := $(wildcard $(src_path)/*.cpp)
-OBJ_FILES := $(addprefix $(build_path)/,$(notdir $(CPP_FILES:.cpp=.o)))
+OBJ_FILES += $(addprefix $(build_path)/,$(notdir $(CPP_FILES:.cpp=.o)))
 $(info $(CPP_FILES))
 $(info $(CPP_FILES))
 LDFLAGS = -lm `pkg-config --cflags gtk+-2.0` `pkg-config --libs gtk+-2.0`
 #OBJS = OBJ_FILES
 #$(COMPONENT_OBJ)/externalinterface.o
+INC_PATH += -I$(inc_path)
 DIR =local/aaaaa/assistgps/client_handler/inc
 $(build_path)%.o: $(src_path)%.cpp
-	gcc -pthread -g -I$(inc_path) -c $< -o $@
+	g++ -g -I$(inc_path) -c $< -o $@ -lpthread

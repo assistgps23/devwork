@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "os_methods.h"
 
 class external_interface {
 public:
